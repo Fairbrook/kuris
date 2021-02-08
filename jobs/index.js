@@ -8,12 +8,10 @@ async function getLatest(){
     const [episodes, storedEpisodes] = await Promise.all([
         api.getLatestEpisodes(), keyv.get('episodes')
     ]);
-    console.log('epiosodes', storedEpisodes);
     keyv.set('episodes', episodes);
     if(!storedEpisodes)return;
     const newones = episodes.filter((e)=>!storedEpisodes.find((s)=>s.title===e.title));
-    console.log('nuevos', newones);
-    storedEpisodes.forEach(async(a)=>{
+    newones.forEach(async(a)=>{
         const embed = new Discord.MessageEmbed();
         embed.setTitle(`Nuevo capitulo de ${a.label}`)
         embed.addField('Link',`https://animeflv.net/ver/${a.title}`);
