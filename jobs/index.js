@@ -16,7 +16,7 @@ async function getLatest(){
     storedEpisodes.forEach(async(a)=>{
         const embed = new Discord.MessageEmbed();
         embed.setTitle(`Nuevo capitulo de ${a.label}`)
-        embed.addField('Link',`https://anime.flv/ver/${a.title}`);
+        embed.addField('Link',`https://animeflv.net/ver/${a.title}`);
         embed.addField('Episodio', a.episode);
         const usersId = await keyv.get(a.title.split('-').slice(0,-1).join('-'));
         if(!usersId)return;
