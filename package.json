@@ -1,0 +1,23 @@
+{
+  "name": "kuris-chan",
+  "version": "1.0.0",
+  "description": "Anime tsundere genius bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "env-cmd nodemon ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fairbrook",
+  "license": "ISC",
+  "dependencies": {
+    "@keyv/sqlite": "^2.0.2",
+    "animeflv-scrapper": "^0.3.2",
+    "discord.js": "^12.5.1",
+    "env-cmd": "^10.1.0",
+    "keyv": "^4.0.3",
+    "node-schedule": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
