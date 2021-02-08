@@ -4,7 +4,8 @@
   "description": "Anime tsundere genius bot",
   "main": "index.js",
   "scripts": {
-    "start": "env-cmd nodemon ./index.js",
+    "dev": "env-cmd nodemon ./index.js",
+    "start": "env-cmd node ./index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Fairbrook",
